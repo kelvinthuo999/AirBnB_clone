@@ -5,6 +5,13 @@ FileStorage class for serializing and deserializing instances to/from a JSON fil
 
 import json
 from os import path
+from models.base_model import BaseModel
+from models.user import User
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.place import Place
+from models.review import Review
 
 class FileStorage:
     """
@@ -14,13 +21,18 @@ class FileStorage:
     __file_path = "file.json"
     __objects = {}
 
-    def all(self):
+    def all(self, cls=None):
         """
-        Retrieve all objects from the storage.
+        Retrieve all objects from the storage, or filter by class if cls is provided.
+        Args:
+            cls (class): Class to filter objects by.
         Returns:
-            A dictionary of all objects.
+            A dictionary of all objects or objects of the specified class.
         """
-        return FileStorage.__objects
+        if cls is None:
+            return FileStorage.__objects
+        filtered_objects = {k: v for k, v in FileStorage.__objects.items() if isinstance(v, cls)}
+        return filtered_objects
 
     def new(self, obj):
         """
@@ -53,3 +65,14 @@ class FileStorage:
                     cls = models[class_name]
                     instance = cls(**value)
                     FileStorage.__objects[key] = instance
+
+# Add the new classes to the models dictionary
+models = {
+    "BaseModel": BaseModel,
+    "User": User,
+    "State": State,
+    "City": City,
+    "Amenity": Amenity,
+    "Place": Place,
+    "Review": Review
+}

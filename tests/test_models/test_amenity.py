@@ -8,6 +8,7 @@ from datetime import datetime
 from time import sleep
 from models.amenity import Amenity
 
+
 class TestAmenity(unittest.TestCase):
     """
     Test cases for the Amenity class.
@@ -41,6 +42,7 @@ class TestAmenity(unittest.TestCase):
         self.assertIn('created_at', amenity_dict)
         self.assertIn('updated_at', amenity_dict)
         self.assertIn('name', amenity_dict)
+
 
 if __name__ == '__main__':
     unittest.main()

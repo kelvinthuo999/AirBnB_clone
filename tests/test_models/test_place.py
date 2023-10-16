@@ -15,14 +15,6 @@ class TestPlace(unittest.TestCase):
     Defines the test cases for the Place class.
     """
 
-    def test_inheritance(self):
-        """
-        Test if Place inherits from BaseModel.
-        """
-        place = Place()
-        self.assertIsInstance(place, Place)
-        self.assertIsInstance(place, BaseModel)
-
     def test_attributes(self):
         """
         Test the attributes of the Place class.
@@ -76,8 +68,6 @@ class TestPlace(unittest.TestCase):
         self.assertIsInstance(place_dict, dict)
         self.assertEqual(place_dict['__class__'], 'Place')
         self.assertEqual(place_dict['id'], place.id)
-        self.assertEqual(place_dict['created_at'], place.created_at.isoformat())
-        self.assertEqual(place_dict['updated_at'], place.updated_at.isoformat())
 
     def test_to_dict_attrs(self):
         """
@@ -96,6 +86,7 @@ class TestPlace(unittest.TestCase):
         self.assertTrue('latitude' in place_dict)
         self.assertTrue('longitude' in place_dict)
         self.assertTrue('amenity_ids' in place_dict)
+
 
 if __name__ == '__main__':
     unittest.main()

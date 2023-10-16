@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-This is the city module for the HBNB project.
+Definition of the class City
 """
 from models.base_model import BaseModel
 

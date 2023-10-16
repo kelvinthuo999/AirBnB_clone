@@ -1,10 +1,7 @@
 #!/usr/bin/python3
-"""
-Module: __init__.py
-"""
-from models.engine import file_storage
-from models.user import User
+""" Initialization module for the HBNB project's data models. """
 
+from models.engine.file_storage import FileStorage
 
-storage = file_storage.FileStorage()
+storage = FileStorage()
 storage.reload()

@@ -13,6 +13,7 @@ The AirBnB Clone project allows users to interact with various types of objects,
 - You need to have `Python 3` installed on your system.
 - cd into the repository.
 - Run the console.py script to start the console.
+- To use the console, you can create classes, list, or destroy the classes.
 - Use the quit command to stop the console.
 
 ## Tests

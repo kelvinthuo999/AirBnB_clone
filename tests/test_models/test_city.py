@@ -2,13 +2,13 @@
 """
 Unit tests for the City class.
 """
-
 import os
+import models
 import unittest
-from models.engine.file_storage import FileStorage
-from models import storage
-from models.city import City
 from datetime import datetime
+from time import sleep
+from models.city import City
+
 
 class TestCity(unittest.TestCase):
     """

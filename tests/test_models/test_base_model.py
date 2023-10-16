@@ -1,14 +1,11 @@
 #!/usr/bin/python3
 """ unit test for BaseModel class """
-import json
 import os
-import time
+import models
 import unittest
-import uuid
 from datetime import datetime
+from time import sleep
 from models.base_model import BaseModel
-from models.engine.file_storage import FileStorage
-
 
 class TestBaseModel(unittest.TestCase):
     """

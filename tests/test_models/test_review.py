@@ -3,11 +3,11 @@
 Unittests for the Review class.
 """
 import os
+import models
 import unittest
-from models.review import Review
-from models import storage
 from datetime import datetime
-from models.engine.file_storage import FileStorage
+from time import sleep
+from models.review import Review
 
 
 class TestReview(unittest.TestCase):

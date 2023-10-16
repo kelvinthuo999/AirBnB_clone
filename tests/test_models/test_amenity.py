@@ -2,12 +2,11 @@
 """Unit tests for the `amenity` module.
 """
 import os
+import models
 import unittest
-from models import storage
 from datetime import datetime
+from time import sleep
 from models.amenity import Amenity
-from models.engine.file_storage import FileStorage
-
 
 class TestAmenity(unittest.TestCase):
     """

@@ -2,13 +2,13 @@
 """
 Unit tests for the State class.
 """
-
 import os
+import models
 import unittest
-from models.engine.file_storage import FileStorage
-from models.state import State
-from models import storage
 from datetime import datetime
+from time import sleep
+from models.review import Review
+
 
 class TestState(unittest.TestCase):
     """

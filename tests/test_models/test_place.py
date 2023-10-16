@@ -2,13 +2,13 @@
 """
 Unit tests for the Place class.
 """
-
 import os
+import models
 import unittest
-from models.engine.file_storage import FileStorage
-from models.place import Place
-from models import storage
 from datetime import datetime
+from time import sleep
+from models.place import Place
+
 
 class TestPlace(unittest.TestCase):
     """

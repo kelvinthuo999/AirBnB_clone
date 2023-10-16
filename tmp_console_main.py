@@ -2,10 +2,10 @@
 """
 This is the console module for the HBNB project.
 """
+
 import cmd
 from models.base_model import BaseModel
 from models import storage
-
 
 class HBNBCommand(cmd.Cmd):
     """
@@ -14,8 +14,7 @@ class HBNBCommand(cmd.Cmd):
 
     prompt = "(hbnb) "
 
-    valid_classes = ["BaseModel", "User", "Place",
-                     "State", "City", "Amenity", "Review"]
+    valid_classes = ["BaseModel", "User", "Place", "State", "City", "Amenity", "Review"]
 
     def do_quit(self, line):
         """
@@ -52,8 +51,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_show(self, line):
         """
-        Print the string representation of an instance
-        based on class name and id.
+        Print the string representation of an instance based on class name and id.
         Usage: show <class name> <id>
         """
         args = line.split()
@@ -73,8 +71,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, line):
         """
-        Delete an instance based on class name and id
-        (save the change into the JSON file).
+        Delete an instance based on class name and id (save the change into the JSON file).
         Usage: destroy <class name> <id>
         """
         args = line.split()
@@ -95,8 +92,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """
-        Print all string representations of instances
-        based on the class name or all instances.
+        Print all string representations of instances based on the class name or all instances.
         Usage: all [class name]
         """
         args = line.split()
@@ -116,8 +112,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """
-        Update an instance based on class name and id
-        by adding or updating an attribute.
+        Update an instance based on class name and id by adding or updating an attribute.
         Usage: update <class name> <id> <attribute name> "<attribute value>"
         """
         args = line.split()
@@ -142,7 +137,6 @@ class HBNBCommand(cmd.Cmd):
                 obj.save()
             else:
                 print("** no instance found **")
-
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()

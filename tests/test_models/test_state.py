@@ -7,7 +7,7 @@ import models
 import unittest
 from datetime import datetime
 from time import sleep
-from models.review import Review
+from models.state import State
 
 
 class TestState(unittest.TestCase):
@@ -51,6 +51,7 @@ class TestState(unittest.TestCase):
         self.assertIn("'created_at':", string)
         self.assertIn("'updated_at':", string)
         self.assertIn("'name':", string)
+
 
 if __name__ == '__main__':
     unittest.main()

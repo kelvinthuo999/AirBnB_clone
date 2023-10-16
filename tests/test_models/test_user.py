@@ -2,7 +2,6 @@
 """
 Unit tests for the User class.
 """
-
 import os
 import models
 import unittest
@@ -64,6 +63,7 @@ class TestUser(unittest.TestCase):
         self.assertIn("'password':", string)
         self.assertIn("'first_name':", string)
         self.assertIn("'last_name':", string)
+
 
 if __name__ == '__main__':
     unittest.main()

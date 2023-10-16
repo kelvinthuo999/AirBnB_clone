@@ -7,6 +7,7 @@ from datetime import datetime
 from time import sleep
 from models.base_model import BaseModel
 
+
 class TestBaseModel(unittest.TestCase):
     """
     Test cases for the BaseModel class.
@@ -30,7 +31,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIsInstance(model.created_at, datetime)
         self.assertIsInstance(model.updated_at, datetime)
         # Verify that the instance is added to the storage
-        self.assertIn(model, storage.all().values())
+        self.assertIn(model, models.storage.all().values())
 
     def test_str(self):
         """
@@ -70,6 +71,7 @@ class TestBaseModel(unittest.TestCase):
         self.assertIn('created_at', model_dict)
         self.assertIn('updated_at', model_dict)
         self.assertIn('__class__', model_dict)
+
 
 if __name__ == '__main__':
     unittest.main()

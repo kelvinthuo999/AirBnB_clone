@@ -8,6 +8,7 @@ import unittest
 from datetime import datetime
 from time import sleep
 from models.city import City
+from models.base_model import BaseModel
 
 
 class TestCity(unittest.TestCase):

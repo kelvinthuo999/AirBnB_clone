@@ -2,12 +2,12 @@
 """
 Unittests for the Review class.
 """
-import os
-import models
-import unittest
 from datetime import datetime
-from time import sleep
+import inspect
 from models.review import Review
+from models.base_model import BaseModel
+import pep8
+import unittest
 
 
 class TestReview(unittest.TestCase):
@@ -40,6 +40,7 @@ class TestReview(unittest.TestCase):
         self.assertEqual(type(review.place_id), str)
         self.assertEqual(type(review.user_id), str)
         self.assertEqual(type(review.text), str)
+
 
 if __name__ == '__main__':
     unittest.main()

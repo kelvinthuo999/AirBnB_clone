@@ -1,8 +1,7 @@
 #!/usr/bin/python3
 """
-FileStorage class for serializing and deserializing instances to/from a JSON file.
+FileStorage class for serializing and deserializing instances.
 """
-
 import json
 from os import path
 from models.base_model import BaseModel
@@ -13,9 +12,10 @@ from models.amenity import Amenity
 from models.place import Place
 from models.review import Review
 
+
 class FileStorage:
     """
-    FileStorage class defines methods for managing object serialization and deserialization to/from a JSON file.
+    FileStorage class defines methods for serialization and deserialization
     """
 
     __file_path = "file.json"
@@ -23,7 +23,8 @@ class FileStorage:
 
     def all(self, cls=None):
         """
-        Retrieve all objects from the storage, or filter by class if cls is provided.
+        Retrieve all objects from the storage,
+        or filter by class if cls is provided.
         Args:
             cls (class): Class to filter objects by.
         Returns:
@@ -31,7 +32,8 @@ class FileStorage:
         """
         if cls is None:
             return FileStorage.__objects
-        filtered_objects = {k: v for k, v in FileStorage.__objects.items() if isinstance(v, cls)}
+        filtered_objects = {k: v for k, v in FileStorage.__objects.items()
+                            if isinstance(v, cls)}
         return filtered_objects
 
     def new(self, obj):
@@ -65,6 +67,7 @@ class FileStorage:
                     cls = models[class_name]
                     instance = cls(**value)
                     FileStorage.__objects[key] = instance
+
 
 # Add the new classes to the models dictionary
 models = {

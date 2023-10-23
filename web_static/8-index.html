@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- This sets the character encoding to UTF-8, which is commonly used for web pages. -->
+    <meta charset="UTF-8">
+    <!-- This sets the viewport settings for responsive design. -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- These lines link to external CSS files for styling the web page. -->
+    <!-- "4-common.css" is for common styles. -->
+    <link rel="stylesheet" type="text/css" href="./styles/4-common.css">
+    <!-- "8-places.css" is for styling related to places section. -->
+    <link rel="stylesheet" type="text/css" href="./styles/8-places.css">
+    <!-- "3-header.css" is for header styles. -->
+    <link rel="stylesheet" type="text/css" href="./styles/3-header.css">
+    <!-- "3-footer.css" is for footer styles. -->
+    <link rel="stylesheet" type="text/css" href="./styles/3-footer.css">
+    <!-- "6-filters.css" is for additional styles, presumably related to filters. -->
+    <link rel="stylesheet" type="text/css" href="./styles/6-filters.css">
+
+    <!-- This line links to a shortcut icon (favicon) for the webpage, which is displayed in the browser tab. -->
+    <link rel="shortcut icon" type="image/png" href="./images/icon.png">
+    <!-- This sets the title of the web page, which appears in the browser tab. -->
+    <title>AirBnB clone</title>
+</head>
+
+<body>
+    <header>
+        <!-- This is the header section of the web page. -->
+        <!-- This line contains a link with the "logo" class, but the link is empty (href=""). -->
+        <a href="" class="logo"></a>
+    </header>
+
+    <div class="container">
+        <!-- This is a container div, presumably used for layout purposes. -->
+        <section class="filters">
+            <!-- This is a section for filters, presumably related to search options. -->
+
+            <div class="locations">
+                <!-- This div contains information about locations or states. -->
+                <h3>States</h3>
+                <!-- This is a heading indicating "States." -->
+                <h4>California, Arizona</h4>
+                <!-- This is a subheading indicating specific states (California, Arizona, etc.). -->
+                <div class="popover">
+                    <!-- This is a div for additional information, possibly for each state. -->
+                    <h2>Arizona:</h2>
+                    <!-- Heading for the state of Arizona. -->
+                    <ul>
+                        <!-- Unordered list for listing specific locations within Arizona. -->
+                        <li>Page</li>
+                        <!-- Location 1 in Arizona. -->
+                        <li>Page2</li>
+                        <!-- Location 2 in Arizona. -->
+                    </ul>
+                    <h2>California:</h2>
+                    <!-- Heading for the state of California. -->
+                    <ul>
+                        <!-- Unordered list for listing specific locations within California. -->
+                        <li>San Francisco</li>
+                        <!-- Location 1 in California. -->
+                        <li>Los Altos</li>
+                        <!-- Location 2 in California. -->
+                    </ul>
+                </div>
+            </div>
+
+            <div class="amenities">
+                <!-- This div contains information about amenities. -->
+                <h3>Amenities</h3>
+                <!-- This is a heading indicating "Amenities." -->
+                <h4>Internet, kitchen</h4>
+                <!-- This is a subheading indicating specific amenities (Internet, Kitchen, etc.). -->
+                <div class="popover">
+                    <!-- This is a div for additional information, possibly for each amenity. -->
+                    <ul>
+                        <!-- Unordered list for listing specific amenities. -->
+                        <li>Internet</li>
+                        <!-- Amenity 1: Internet. -->
+                        <li>TV</li>
+                        <!-- Amenity 2: TV. -->
+                        <li>Kitchen</li>
+                        <!-- Amenity 3: Kitchen. -->
+                        <li>Iron</li>
+                        <!-- Amenity 4: Iron. -->
+                    </ul>
+                </div>
+            </div>
+
+            <button type="button">Search</button>
+            <!-- This button can be used for triggering a search action. -->
+        </section>
+
+        <section class="places">
+            <!-- This is a section for listing places. -->
+            <h1>Places</h1>
+            <!-- Heading indicating "Places." -->
+            <article>
+                <!-- This is an article within the section. -->
+                <h2>My home</h2>
+                <!-- Heading indicating the first place "My home." -->
+                <div class="price_by_night">
+                    <p>$80</p>
+                </div>
+                <!-- Div for displaying the price per night. -->
+                <div class="information">
+                    <!-- Div for displaying additional information about the place. -->
+                    <div class="max_guest">
+                        <p>2 guests</p>
+                    </div>
+                    <!-- Div for displaying the maximum number of guests. -->
+                    <div class="number_rooms">
+                        <p>1 bedroom</p>
+                    </div>
+                    <!-- Div for displaying the number of bedrooms. -->
+                    <div class="number_bathrooms">
+                        <p>1 bathroom</p>
+                    </div>
+                    <!-- Div for displaying the number of bathrooms. -->
+                </div>
+                <div class="user">
+                    <!-- Div for displaying user information. -->
+                    <b>Owner:</b> John Lennon
+                </div>
+                <div class="description">
+                    <!-- Div for displaying a description of the place. -->
+                    <p>This is a unique (2 room) apartment located in the heart of the Old Town, 2 mins from the Market Square. Its original interior design, mixing antique and modern elements in large space, will help you to experience Krakow's unforgettable charm.</p>
+                </div>
+            </article>
+            <article>
+                <!-- This is an article within the section. -->
+                <h2>Tiny house</h2>
+                <!-- Heading indicating the second place "Tiny house." -->
+                <div class="price_by_night">
+                    <p>$65</p>
+                </div>
+                <!-- Div for displaying the price per night. -->
+                <div class "information">
+                    <!-- Div for displaying additional information about the place. -->
+                    <div class="max_guest">
+                        <p>4 guests</p>
+                    </div>
+                    <!-- Div for displaying the maximum number of guests. -->
+                    <div class="number_rooms">
+                        <p>3 bedroom</p>
+                    </div>
+                    <!-- Div for displaying the number of bedrooms. -->
+                    <div class="number_bathrooms">
+                        <p>2 bathroom</p>
+                    </div>
+                    <!-- Div for displaying the number of bathrooms. -->
+                </div>
+                <div class="user">
+                    <!-- Div for displaying user information. -->
+                    <b>Owner:</b> Paula
+                </div>
+                <div class="description">
+                    <!-- Div for displaying a description of the place. -->
+                    <p>This house is an old Japanese traditional house built in 1948. We renovated inside so it is very clean and comfortable. I am an artist There is a kitchen and living area at the1st floor and you can see the little Japanese garden from it. The 2nd floor is an also traditional tatami room and sleep with Japanese style of bed (FUTON) so you will have real Japanese life style at our place.</p>
+                </div>
+            </article>
+            <article>
+                <!-- This is an article within the section. -->
+                <h2>A suite</h2>
+                <!-- Heading indicating the third place "A suite." -->
+                <div class="price_by_night">
+                    <p>$190</p>
+                </div>
+                <!-- Div for displaying the price per night. -->
+                <div class="information">
+                    <!-- Div for displaying additional information about the place. -->
+                    <div class="max_guest">
+                        <p>8 guests</p>
+                    </div>
+                    <!-- Div for displaying the maximum number of guests. -->
+                    <div class="number_rooms">
+                        <p>4 bedroom</p>
+                    </div>
+                    <!-- Div for displaying the number of bedrooms. -->
+                    <div class="number_bathrooms">
+                        <p>5 bathroom</p>
+                    </div>
+                    <!-- Div for displaying the number of bathrooms. -->
+                </div>
+                <div class="user">
+                    <!-- Div for displaying user information. -->
+                    <b>Owner:</b> Alex
+                </div>
+                <div class="description">
+                    <!-- Div for displaying a description of the place. -->
+                    <p>Serene courtyards, lily pools, and a rooftop terrace with a circular dining sala set a reflective tone at this traditional Thai villa near Dream Beach Club. Glass walls, marble floors, and rain showers strike a contemporary theme inside. Cue the sound system, hit the gym, and swim in the infinity pool with epic ocean views, or check out the resort's library and spa. Ton Sai Waterfall is a 6-mile drive.</p>
+                </div>
+            </article>
+        </section>
+    </div>
+    <footer>
+        <p>Best School</p>
+    </footer>
+</body>
+
+</html>
